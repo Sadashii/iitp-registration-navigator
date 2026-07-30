@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IITP Registration Navigator</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header Section -->
+        <header class="main-header">
+            <div class="header-logo">
+                <i class="fa-solid fa-graduation-cap logo-icon"></i>
+                <div class="logo-text">
+                    <h1>IITP Registration Navigator</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Full Width Layout -->
+        <main class="main-dashboard">
+            <!-- Panel: Lists and Details -->
+            <section class="list-section">
+                <div class="cards-container" id="cardsContainer">
+                    <!-- Cards will be dynamically injected here via app.js -->
+                    <div class="loading-state">
+                        <div class="spinner"></div>
+                        <p>Locating registration checkpoints...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Extra Feature Section: Checklists and Guides -->
+        <section class="info-section">
+            <!-- Checklist Card -->
+            <div class="info-card checklist-card">
+                <div class="card-header">
+                    <h3><i class="fa-solid fa-list-check"></i> Mandatory Documents Checklist</h3>
+                    <p>Ensure you have original files and at least two sets of photocopies before entering registration counters.</p>
+                </div>
+                <ul class="checklist-grid">
+                    <li>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="chk-admit">
+                            <span class="checkmark"></span>
+                            <span class="item-text">JEE Main & Advanced Admit Card / GATE Score Card</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="chk-seat">
+                            <span class="checkmark"></span>
+                            <span class="item-text">JoSAA / CSAB Seat Allocation Letter</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="chk-marks">
+                            <span class="checkmark"></span>
+                            <span class="item-text">10th & 12th Marksheets and Certificates (Original)</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="chk-photos">
+                            <span class="checkmark"></span>
+                            <span class="item-text">4-6 Passport Size Photographs (Recent)</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="chk-medical">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Medical Certificate (in JoSAA Annexure format)</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="chk-category">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Category Certificate (OBC-NCL, SC, ST, EWS) if applicable</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="chk-receipt">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Registration Fee Payment Receipt / Proof of Transfer</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="chk-tc">
+                            <span class="checkmark"></span>
+                            <span class="item-text">Transfer Certificate / Migration Certificate / Character Cert.</span>
+                        </label>
+                    </li>
+                </ul>
+                <div class="checklist-footer">
+                    <span class="checklist-progress-text" id="checklistProgress">0 of 8 completed</span>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="app-footer">
+            <p>© 2026 Indian Institute of Technology Patna. All Rights Reserved.</p>
+            <p class="developer-credit">Developed for IIT Patna Registration Assistance</p>
+        </footer>
+    </div>
+
+
+    
+    <!-- Custom Application Data -->
+    <script src="locations.js"></script>
+    
+    <!-- Custom Application Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
