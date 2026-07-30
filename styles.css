@@ -17,6 +17,9 @@
     --text-secondary: #475569; /* Slate 600 */
     --text-muted: #64748b;
     
+    --bg-badge: rgba(37, 99, 235, 0.08);
+    --color-badge: #1d4ed8;
+    
     --scrollbar-thumb: #cbd5e1;
     --scrollbar-thumb-hover: #94a3b8;
     
@@ -45,6 +48,9 @@
         --text-primary: #f8fafc;
         --text-secondary: #94a3b8;
         --text-muted: #64748b;
+        
+        --bg-badge: rgba(59, 130, 246, 0.15);
+        --color-badge: #60a5fa;
         
         --scrollbar-thumb: #374151;
         --scrollbar-thumb-hover: #4b5563;
@@ -438,6 +444,15 @@ body {
     margin-top: 0.25rem;
 }
 
+.disclaimer-text {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    border-left: 2px solid var(--color-warning);
+    padding-left: 0.6rem;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
+
 /* Document Checklist styling */
 .checklist-grid {
     display: grid;
@@ -455,7 +470,24 @@ body {
     color: var(--text-secondary);
     user-select: none;
     transition: var(--transition-smooth);
-    align-items: flex-start;
+    align-items: center; /* align checklist text and copy badge vertically */
+    width: 100%;
+}
+
+.copy-badge {
+    background: var(--bg-badge);
+    color: var(--color-badge);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    margin-left: auto; /* Push to the right end of the flexbox */
+    flex-shrink: 0;
+    transition: var(--transition-smooth);
+}
+
+.checkbox-container input:checked ~ .copy-badge {
+    opacity: 0.5;
 }
 
 .checkbox-container input {
