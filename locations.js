@@ -35,13 +35,19 @@ const locations = [
         "name": "Chemical Department",
         "lat": 25.5341954,
         "lng": 84.8485916,
-        "building": "Academic Block 1"
+        "building": "Academic Block 1",
+        "floor": 1,
+        "room": 120,
+        "time": "10:00 am"
     },
     {
         "name": "Civil Department",
         "lat": 25.5337894,
         "lng": 84.8506968,
-        "building": "Academic Block 6"
+        "building": "Academic Block 6",
+        "floor": 1,
+        "room": 131,
+        "time": "10:00 am"
     },
     {
         "name": "Computer Science / AI & DS",
@@ -49,7 +55,16 @@ const locations = [
         "lng": 84.8478332,
         "building": "Academic Block 2",
         "floor": 0,
-        "time": "10:00 am onwards"
+        "time": "10:00 am"
+    },
+    {
+        "name": "Cst Department",
+        "lat": 25.5333876,
+        "lng": 84.8499555,
+        "building": "Academic Block 4",
+        "floor": 3,
+        "room": "310-311",
+        "time": "10:00 am"
     },
     {
         "name": "ECE",
@@ -58,7 +73,7 @@ const locations = [
         "building": "Academic Block 3",
         "floor": 1,
         "room": 129,
-        "time": "10:00 am onwards"
+        "time": "10:00 am"
     },
     {
         "name": "Economics",
@@ -66,7 +81,7 @@ const locations = [
         "lng": 84.8486345,
         "building": "Academic Block 1",
         "floor": 2,
-        "time": "10:00 am onwards"
+        "time": "10:00 am"
     },
     {
         "name": "EEE",
@@ -74,8 +89,7 @@ const locations = [
         "lng": 84.8517714,
         "building": "Academic Block 3",
         "floor": 1,
-        "room": "EE dept classroom (BTech) / EE conference room (MTech + MBA)",
-        "time": "9:00 am onwards"
+        "time": "10:00 am"
     },
     {
         "name": "Mathematics / MnC",
@@ -84,7 +98,7 @@ const locations = [
         "building": "Academic Block 1",
         "floor": 4,
         "room": 402,
-        "time": "10:00 am onwards"
+        "time": "10:00 am"
     },
     {
         "name": "Mechanical Department",
@@ -93,7 +107,7 @@ const locations = [
         "building": "Academic Block 3",
         "floor": 5,
         "room": 512,
-        "time": "10:00 am to 5:30 pm"
+        "time": "10:00 am"
     },
     {
         "name": "Metallurgical and Materials",
@@ -101,7 +115,7 @@ const locations = [
         "lng": 84.8506968,
         "building": "Academic Block 6",
         "floor": 3,
-        "time": "10:00 am onwards"
+        "time": "10:00 am"
     },
     {
         "name": "Physics / EP",
@@ -110,6 +124,6 @@ const locations = [
         "building": "Academic Block 4",
         "floor": 3,
         "room": 329,
-        "time": "10:00 am to 5:00 pm"
+        "time": "10:00 am"
     }
 ];
