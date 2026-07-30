@@ -98,8 +98,39 @@ function updateChecklistProgress() {
     document.getElementById("progressBar").style.width = `${progressPercent}%`;
 }
 
-// 4. Initial Setup and Event Listeners
+// 4. Visitor Counter API Integration
+async function initVisitorCounter() {
+    const namespace = "iitp-registration-navigator";
+    const key = "visits";
+    const hostname = window.location.hostname;
+    
+    // Determine whether to increment (production) or just read (localhost development)
+    const isLocalhost = hostname === "localhost" || hostname === "127.0.0.1" || hostname === "";
+    const endpoint = isLocalhost 
+        ? `https://api.counterapi.dev/v1/${namespace}/${key}`
+        : `https://api.counterapi.dev/v1/${namespace}/${key}/up`;
+        
+    try {
+        const response = await fetch(endpoint);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        
+        const data = await response.json();
+        const container = document.getElementById("visitorCounter");
+        const countSpan = document.getElementById("visitorCount");
+        
+        if (container && countSpan && typeof data.value !== "undefined") {
+            countSpan.textContent = data.value.toLocaleString();
+            container.style.display = "inline-flex"; // Show only after loading successfully
+        }
+    } catch (error) {
+        console.warn("Could not load or update visitor count:", error);
+        // Fail silently and leave the visitor-counter container hidden
+    }
+}
+
+// 5. Initial Setup and Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
     renderCards(locations);
     initChecklist();
+    initVisitorCounter();
 });

@@ -622,6 +622,37 @@ body {
     margin-top: 0.15rem;
 }
 
+/* Visitor Counter Header Widget */
+.visitor-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--bg-badge);
+    border: 1.5px solid var(--color-border);
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-sm);
+}
+
+.visitor-counter:hover {
+    border-color: var(--color-border-active);
+    box-shadow: var(--shadow-md);
+}
+
+.visitor-counter i {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+}
+
+.visitor-count {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
 /* Footer Section */
 .app-footer {
     display: flex;
