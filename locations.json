@@ -15,88 +15,99 @@
         "name": "Central Lecture Hall (CLH)",
         "lat": 25.5331106,
         "lng": 84.8516113,
-        "building": "Central Lecture Hall",
-        "floor": 1,
-        "room": 101
+        "building": "Central Lecture Hall"
     },
     {
         "name": "Tutorial Block - Block 9",
         "lat": 25.5325985,
         "lng": 84.8518636,
-        "building": "Block 9",
-        "floor": 1,
-        "room": 101
+        "building": "Block 9"
     },
     {
         "name": "Admin Section",
         "lat": 25.5357327,
         "lng": 84.8511765,
-        "building": "Administrative Block",
-        "floor": 1,
-        "room": 102
+        "building": "Administrative Block"
     },
     {
         "name": "Chemical Department",
         "lat": 25.5341954,
         "lng": 84.8485916,
-        "building": "Academic Block 1",
-        "floor": 1,
-        "room": 107
+        "building": "Academic Block 1"
     },
     {
         "name": "Civil Department",
         "lat": 25.5337894,
         "lng": 84.8506968,
-        "building": "Academic Block 6",
-        "floor": 3,
-        "room": 311
+        "building": "Academic Block 6"
     },
     {
-        "name": "Computer Science Department",
+        "name": "Computer Science / AI & DS",
         "lat": 25.5347744,
         "lng": 84.8478332,
         "building": "Academic Block 2",
-        "floor": 1,
-        "room": 101
+        "floor": 0,
+        "time": "10:00 am onwards"
     },
     {
-        "name": "Electrical Department",
-        "lat": 25.5340637,
-        "lng": 84.851611,
+        "name": "ECE",
+        "lat": 25.5340557,
+        "lng": 84.8517714,
         "building": "Academic Block 3",
-        "floor": 2,
-        "room": 204
+        "floor": 1,
+        "room": 129,
+        "time": "10:00 am onwards"
     },
     {
-        "name": "Mathematics Department",
+        "name": "Economics",
         "lat": 25.5341978,
         "lng": 84.8486345,
         "building": "Academic Block 1",
         "floor": 2,
-        "room": 201
+        "time": "10:00 am onwards"
+    },
+    {
+        "name": "EEE",
+        "lat": 25.5340557,
+        "lng": 84.8517714,
+        "building": "Academic Block 3",
+        "floor": 1,
+        "room": "EE dept classroom (BTech) / EE conference room (MTech + MBA)",
+        "time": "9:00 am onwards"
+    },
+    {
+        "name": "Mathematics / MnC",
+        "lat": 25.5341978,
+        "lng": 84.8486345,
+        "building": "Academic Block 1",
+        "floor": 4,
+        "room": 402,
+        "time": "10:00 am onwards"
     },
     {
         "name": "Mechanical Department",
         "lat": 25.5340298,
         "lng": 84.8516137,
         "building": "Academic Block 3",
-        "floor": 1,
-        "room": 112
+        "floor": 5,
+        "room": 512,
+        "time": "10:00 am to 5:30 pm"
     },
     {
-        "name": "Metallurgy Department",
-        "lat": 25.5337748,
-        "lng": 84.8507022,
+        "name": "Metallurgical and Materials",
+        "lat": 25.5337894,
+        "lng": 84.8506968,
         "building": "Academic Block 6",
-        "floor": 1,
-        "room": 108
+        "floor": 3,
+        "time": "10:00 am onwards"
     },
     {
-        "name": "Physics Department",
+        "name": "Physics / EP",
         "lat": 25.5333876,
         "lng": 84.8499555,
         "building": "Academic Block 4",
-        "floor": 1,
-        "room": 105
+        "floor": 3,
+        "room": 329,
+        "time": "10:00 am to 5:00 pm"
     }
 ]

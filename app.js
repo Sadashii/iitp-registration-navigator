@@ -20,10 +20,37 @@ function renderCards(dataList) {
         // Generate Maps URL
         const gmapsUrl = `https://www.google.com/maps/search/?api=1&query=${loc.lat},${loc.lng}`;
 
-        const roomFloorHtml = (loc.room && loc.floor) ? `
+        let roomFloorHtml = '';
+        const getFloorName = (floor) => {
+            if (floor === 0) return 'Ground Floor';
+            if (floor === 1) return '1st Floor';
+            if (floor === 2) return '2nd Floor';
+            if (floor === 3) return '3rd Floor';
+            if (floor === 4) return '4th Floor';
+            if (floor === 5) return '5th Floor';
+            return `Floor ${floor}`;
+        };
+
+        if (loc.room && loc.floor !== undefined && loc.floor !== null) {
+            roomFloorHtml = `
+                <div class="detail-item">
+                    <i class="fa-solid fa-door-open"></i>
+                    <span>Room: ${loc.room}, ${getFloorName(loc.floor)}</span>
+                </div>
+            `;
+        } else if (loc.floor !== undefined && loc.floor !== null) {
+            roomFloorHtml = `
+                <div class="detail-item">
+                    <i class="fa-solid fa-door-open"></i>
+                    <span>${getFloorName(loc.floor)}</span>
+                </div>
+            `;
+        }
+
+        const timeHtml = loc.time ? `
             <div class="detail-item">
-                <i class="fa-solid fa-door-open"></i>
-                <span>Room: ${loc.room} Floor: ${loc.floor}</span>
+                <i class="fa-solid fa-clock"></i>
+                <span>Time: ${loc.time}</span>
             </div>
         ` : '';
 
@@ -38,6 +65,7 @@ function renderCards(dataList) {
                     <span>${loc.building}</span>
                 </div>
                 ${roomFloorHtml}
+                ${timeHtml}
             </div>
             <div class="card-actions">
                 <a class="card-btn card-btn-primary" href="${gmapsUrl}" target="_blank" onclick="event.stopPropagation();" rel="noopener noreferrer">

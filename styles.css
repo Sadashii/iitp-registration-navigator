@@ -470,7 +470,7 @@ body {
     color: var(--text-secondary);
     user-select: none;
     transition: var(--transition-smooth);
-    align-items: center; /* align checklist text and copy badge vertically */
+    align-items: flex-start;
     width: 100%;
 }
 
@@ -488,6 +488,27 @@ body {
 
 .checkbox-container input:checked ~ .copy-badge {
     opacity: 0.5;
+}
+
+.item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    text-align: left;
+}
+
+.item-text {
+    line-height: 1.35;
+    font-weight: 500;
+    color: var(--text-primary);
+    transition: var(--transition-smooth);
+}
+
+.item-details {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    line-height: 1.35;
+    transition: var(--transition-smooth);
 }
 
 .checkbox-container input {
@@ -539,9 +560,13 @@ body {
     transform: rotate(45deg);
 }
 
-.checkbox-container input:checked ~ .item-text {
+.checkbox-container input:checked ~ .item-content .item-text {
     color: var(--text-muted);
     text-decoration: line-through;
+}
+
+.checkbox-container input:checked ~ .item-content .item-details {
+    opacity: 0.5;
 }
 
 .item-text {
